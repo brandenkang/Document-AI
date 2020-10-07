@@ -5,7 +5,7 @@
 from google.cloud import documentai_v1beta2 as documentai
 
 def main(project_id='document-ai-project-291706',
-        input_uri='gs://analysis_report_samples/sample_ocr_6.pdf'):
+        input_uri='gs://analysis_report_samples/sample_ocr_7.pdf'):
         #  input_uri='gs://cloud-samples-data/documentai/invoice.pdf'):
 
     """Process a single document with the Document AI API, including
@@ -68,7 +68,7 @@ def main(project_id='document-ai-project-291706',
 
     document = client.process_document(request=request)
 
-    file_= open('data_report_5.text','w')
+    file_= open('data_report_6.text','w')
     file_.write('*BEGIN_TEXT_EXTRACTION \n\n')
     # All text extracted from the document
     print('Document Text: {}'.format(document.text))
